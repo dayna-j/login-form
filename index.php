@@ -13,7 +13,11 @@
 
 <body class='d-flex align-items-center'>
   <header class='header'>
-    
+    <div class="logo-container">
+      <h3 class='logo'>
+        Gadget
+      </h3>
+    </div>
   
   </header>
   <div class="video-container">
@@ -40,7 +44,7 @@
                     </span>
                   </div>
 
-                  <input type="text" class="form-control usernameInput" name="username" aria-describedby="usernameHelp" placeholder="Enter user name" required>
+                  <input type="text" class="form-control usernameInput" name="username" aria-describedby="usernameHelp" placeholder="Username" required>
 
                 </div>
               </div>
