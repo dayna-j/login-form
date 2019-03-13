@@ -116,3 +116,19 @@ button[type='submit'] {
 button[type='submit']:hover {
   background-color: #e4eafb;
 }
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  background-color: rgba(65, 33, 33, 0.562);
+
+}
+
+footer div {
+  padding: 5px;
+}

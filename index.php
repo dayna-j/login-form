@@ -1,4 +1,5 @@
 <html>
+
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/styles/css/main.css">
@@ -10,12 +11,11 @@
 </head>
 
 
-
 <body class='d-flex align-items-center'>
   <header class='header'>
     <div class="logo-container">
       <h3 class='logo'>
-        Gadget
+        Gearbox
       </h3>
     </div>
   
@@ -65,7 +65,7 @@
                 <input type="checkbox" class="form-check-input custom-control-input" id="exampleCheck1">
                 <label class="custom-control-label" for="exampleCheck1">Remember me</label>
               </div>
-              <button type="submit" class="btn btn-block mt-3 p-2">Submit</button>
+              <button name='login' value='login' type="submit" class="btn btn-block mt-3 p-2">Submit</button>
             
             </form>
 
@@ -74,6 +74,11 @@
       </div>
     </div>
   </div>
+  <footer class='footer'>
+    <div>
+      &copy 2019 By Dayna Blackwell
+    </div>
+    </footer>
 
 </body>
 </html>
