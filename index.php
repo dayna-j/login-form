@@ -68,7 +68,7 @@
               <button name='login' value='login' type="submit" class="btn btn-block mt-3 p-2">Submit</button>
               
               <div class='text-center' style="margin-top: 10px;">
-                <a href="#">Don't have an account?</a>
+                <a href="./registeration.php">Don't have an account?</a>
               </div>
             
             </form>
