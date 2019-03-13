@@ -19,7 +19,6 @@ function login($dsn,$username,$password, $pdoOptions){
 
         if($conn){
             echo "connection to db has been made<br>";
-            print_r($conn);
             return $conn;
         } } catch (PDOException $e) {
             echo $e->getMessage();

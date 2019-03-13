@@ -28,15 +28,15 @@ if(!isset($username)){
 }
 
 if($validDBLogin){
-    class User{};
-    
+    // the db query with 'named' placeholder, :username
     $sqlQuery = "SELECT userID, userName, password FROM users WHERE userName = :username";
-    // print_r($conn);
+    // 
     $stmt = $conn->prepare($sqlQuery);
+    print_r($stmt);
+    echo "<br>";
     $stmt->bindValue(':username', $username);
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
     print_r($user);
 
     if(!$user){
