@@ -27,7 +27,11 @@
     </div>
   
     <div class="container">
-    
+        <div class="row">
+            <div class="col-lg-6 col-sm-9 col-md-8 mx-auto ">
+                
+            </div>
+        </div>
     </div>
 
   
