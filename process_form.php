@@ -6,6 +6,9 @@
 //  3) Cannot start with a number
 //  4) Cannot be empty
 
+//  password rules:
+//  1) Must use at least 8 characters
+
 // establish connection with database..
 session_start();
 include_once('./db.php');
@@ -32,15 +35,22 @@ if($validDBLogin){
     $sqlQuery = "SELECT userID, userName, password FROM users WHERE userName = :username";
     // 
     $stmt = $conn->prepare($sqlQuery);
-    print_r($stmt);
-    echo "<br>";
+    // print_r($stmt);
+    // echo "<br>";
     $stmt->bindValue(':username', $username);
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
-    print_r($user);
+    // print_r($user);
 
     if(!$user){
         exit("<br><strong>Incorrect username/password</strong>");
+    } else {
+        // compare passwordAttempt to password in database
+        if($passwordAttempt !== $user['password']) 
+            echo "<br><strong>password is incorrect</strong>";
+        else
+             echo "<br><strong>passwords matched</strong>";
+
     }
     
 

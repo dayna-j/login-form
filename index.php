@@ -34,8 +34,8 @@
             <h5 class="card-title text-center">Sign In</h5>
   
             <form method = "POST" action="./process_form.php" class="form">
-              <div class="form-group">
               
+              <div class="form-group">
                 <label for="username">Username</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -66,6 +66,10 @@
                 <label class="custom-control-label" for="exampleCheck1">Remember me</label>
               </div>
               <button name='login' value='login' type="submit" class="btn btn-block mt-3 p-2">Submit</button>
+              
+              <div class='text-center' style="margin-top: 10px;">
+                <a href="#">Don't have an account?</a>
+              </div>
             
             </form>
 

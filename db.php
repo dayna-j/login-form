@@ -16,7 +16,6 @@ function login($dsn,$username,$password, $pdoOptions){
     session_start();
     try {
         $conn = new PDO($dsn, $username, $password, $pdoOptions);
-
         if($conn){
             echo "connection to db has been made<br>";
             return $conn;
