@@ -36,12 +36,35 @@
                         <h5 class="card-title text-center">Registration</h5>
                             <form method = "POST" action="./process_registration.php" class="form">
 
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="">
+                                                <i class="fas fa-user-astronaut"></i>
+                                            </span> 
+                                        </div> 
+                                        <input type="text" class="form-control usernameInput" name="username" aria-describedby="usernameHelp" placeholder="Username" required>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-key"></i>
+                                            </span>
+                                        </div>
+                                        <input type="password" name = 'password' class="form-control passwordInput" id="passwordInput" placeholder="Password" required>
+                                    </div>
+                                </div>
+
                             </form>
-
-
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
