@@ -36,7 +36,7 @@
             <form method = "POST" action="./process_login.php" class="form">
               
               <div class="form-group">
-                <label for="username">Username</label>
+                <label for="usernameInput">Username</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="">
@@ -44,13 +44,13 @@
                     </span>
                   </div>
 
-                  <input type="text" class="form-control usernameInput" name="username" aria-describedby="usernameHelp" placeholder="Username" required>
+                  <input type="text" class="form-control usernameInput" id='usernameInput' name="username" aria-describedby="usernameHelp" placeholder="Username" required>
 
                 </div>
               </div>
                             
               <div class="form-group">
-                <label for="password">Password</label>
+                <label for="passwordInput">Password</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <span class="input-group-text">

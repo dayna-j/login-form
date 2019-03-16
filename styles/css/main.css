@@ -87,6 +87,10 @@ header {
   font-size: 2rem;
 }
 
+i{
+  color: rgba(65, 33, 33, 0.692);
+}
+
 .input-group-text {
   background-color: lightgray;
   border: none;

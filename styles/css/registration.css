@@ -58,6 +58,29 @@
             transform: translate(-50%, -50%);
   }
 
+  .card {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.16);
+  }
+  
+  .card-title {
+    font-family: 'Allerta Stencil', sans-serif;
+    color: white;
+    font-size: 2rem;
+  }
+
+
+  button[type='submit'] {
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: snow;
+    transition: all .5s;
+  }
+  
+  button[type='submit']:hover {
+    background-color: #e4eafb;
+  }
+
   .footer{
     display: flex;
     justify-content: center;
