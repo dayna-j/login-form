@@ -88,7 +88,7 @@
                 INSERT INTO users
                      (userName,password,firstName,lastName,emailAddress)
                 VALUES
-                    (:username,:password,:firstName:,:lastName,:email)
+                    (:username,:password,:firstName,:lastName,:email)
                 ';
 
         $stmt = $conn->prepare($sqlQuery);
@@ -100,6 +100,9 @@
             ':lastName' => $lastName,
             ':email' => $email
         ]);
+        
+        if($stmt) echo"<br><strong>New user was registered!</strong>";
+        else echo"<br><strong>New user was NOT registered!</strong>";
     }
 
 
