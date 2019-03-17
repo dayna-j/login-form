@@ -32,8 +32,10 @@
         //  1) password should be at least 8 characters long
         //  2) password should include at least 1 number
         //  3) password should include at least 1 special character
+        //  4) password should include at least 1 uppercase character
+        //  5) password should include at least 1 lowercase character
 
-        $regex = '//';
+        $regex = '/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/';
         return preg_match($regex, $password);
 
     }
@@ -55,6 +57,24 @@
         return $row["num"];
     }
 
+    function validateFirstNameSyntax($firstName){
+        // alphabetical characters only
+        // 40 characters or less
+        $regex = '/[a-zA-Z]{40,}$/';
+        return preg_match($regex,$firstName);
+    }
+
+    function validateLastNameSyntax($lastName){
+        // alphabetical characters only
+        // 40 characters or less
+        $regex = '/[a-zA-Z]{40,}$/';
+        return preg_match($regex,$lastName);
+    }
+
+
+    function registerUser($username,$password1,$email,$firstName,$lastName){
+
+    }
 
 
 ?>
