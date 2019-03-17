@@ -57,6 +57,16 @@
         return $row["num"];
     }
 
+    function doesEmailExist($email){
+        global $conn;
+        $sqlQuery = 'SELECT COUNT(emailAddress) AS num FROM users WHERE emailAddress = :email';
+        $stmt = $conn->prepare($sqlQuery);
+        $stmt->bindValue(':email', $email);
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $row["num"];
+    }
+
     function validateFirstNameSyntax($firstName){
         // alphabetical characters only
         // 40 characters or less
@@ -73,7 +83,16 @@
 
 
     function registerUser($username,$password1,$email,$firstName,$lastName){
-
+        global $conn;
+        $sqlQuery = '
+                INSERT INTO users
+                     (userName,password,firstName,lastName,emailAddress)
+                VALUES
+                    (:username,:password,:firstName:,:lastName,:email)
+                ';
+        $stmt = $conn->prepare($sqlQuery);
+        $stmt->bindValue(':username',$username,':password',$password,':firstName',$firstName,':lastName',$lastName,':email',$email);
+        $stmt->execute();
     }
 
 
