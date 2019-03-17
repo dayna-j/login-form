@@ -1,8 +1,5 @@
 <?php
 
-//  password rules:
-//  1) Must use at least 8 characters
-
 // establish connection with database..
 session_start();
 include_once('./db.php');
@@ -52,12 +49,6 @@ if($validDBLogin){
 
 
 }
-
-
-
-
-//echo "<strong>Login has been validated!</strong>";
-
 
 
 ?>
