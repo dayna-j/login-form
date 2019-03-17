@@ -1,16 +1,19 @@
 <?php 
     session_start();
+    // session data exists
     print_r($_SESSION);
+    // destroy the session 
     session_unset();    
-// destroy the session 
     session_destroy(); 
+    // session data is destroyed
     print_r($_SESSION);
-
-
 ?>
 
 <html>
+    <head>
+
+    </head>
     <body>
-        You are now logged out!
+        <strong><br>You are now logged out!</strong>
     </body>
 </html>
