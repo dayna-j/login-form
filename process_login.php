@@ -23,7 +23,7 @@ if(!isset($username)){
 
 if($validDBLogin){
     // the db query with 'named' placeholder, :username
-    $sqlQuery = "SELECT userID, userName, password FROM users WHERE userName = :username";
+    $sqlQuery = "SELECT * FROM users WHERE userName = :username";
     // 
     $stmt = $conn->prepare($sqlQuery);
     // print_r($stmt);
@@ -31,6 +31,7 @@ if($validDBLogin){
     $stmt->bindValue(':username', $username);
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
     // print_r($user);
 
     if(!$user){
@@ -42,6 +43,18 @@ if($validDBLogin){
         else
              echo "<br><strong>passwords matched</strong>";
 
+            // user exists in database and passwords match
+            $_SESSION['userID'] = $user['userID'];
+            $_SESSION['logged_in'] = time();
+            $_SESSION['firstName'] = $user['firstName'];
+            $_SESSION['lastName'] = $user['lastName'];
+            $_SESSION['email'] = $user['emailAddress'];
+            
+            // relocate user to their home page
+            header('Location: home.php');
+
+
+
     }
     
 
@@ -52,3 +65,4 @@ if($validDBLogin){
 
 
 ?>
+

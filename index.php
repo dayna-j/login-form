@@ -15,7 +15,7 @@
   <header class='header'>
     <div class="logo-container">
       <h3 class='logo'>
-        Gearbox
+        
       </h3>
     </div>
   

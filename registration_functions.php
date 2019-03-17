@@ -105,5 +105,20 @@
         else echo"<br><strong>New user was NOT registered!</strong>";
     }
 
+    function getUserInfo($username,$email){
+        global $conn;
+        $sqlQuery = '
+                GET * FROM users WHERE userName = :$username AND emailAddress = :$email
+            ';
+        $stmt = $conn->prepare($sqlQuery);
+        $stmt->execute([
+            ':username' => $username,
+            ':email' => $email
+        ]);
+
+        return $stmt;
+        
+    }
+
 
 ?>
