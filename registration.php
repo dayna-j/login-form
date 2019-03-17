@@ -37,43 +37,43 @@
                             <form method = "POST" action="./process_registration.php" class="form">
                                 
 
-                                    <div class="form-row">
+                                <div class="form-row">
                                     
-                                        <div class=" col-md-6">
-                                            <!-- <label for="firstNameInput">First name</label> -->
-                                            <input type="text" name='firstNameInput' class='form-control' id='firstNameInput' placeholder='First name' required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <!-- <label for="lastNameInput">Last name</label> -->
-                                            <input type="text" name='lastNameInput' class='form-control' id='lastNameInput' placeholder='Last name' required>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="emailaddressInput"></label>
-                                        <input id='emailAddressInput' class='form-control' type="email" placeholder='Email' required>
-
-                                        <label for="userNameInput"></label>
-                                        <input id='userNameInput' class='form-control' type="text" placeholder='Username' required>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="col-md-6">
+                                    <div class=" col-md-6">
                                         <!-- <label for="firstNameInput">First name</label> -->
-                                            <input type="password" name='passwordInput1' class='form-control' id='passwordInput1' placeholder='Enter password' required>
-                                        </div>
-                                        <div class="col-md-6">
-                                        <!-- <label for="lastNameInput">Last name</label> -->
-                                            <input type="password" name='passwordInput2' class='form-control' id='passwordInput2' placeholder='Enter password again' required>
-                                        </div>
+                                        <input type="text" name='firstName' class='form-control' id='firstNameInput' placeholder='First name' required>
                                     </div>
-                                    
-                                    <button name='registerButton' value='register' type="submit" class="btn btn-block mt-3 p-2">Sign Up</button>
-                                    <div class='text-center' style="margin-top: 10px;">
-                                        <a href="./index.php">Go back</a>
+                                    <div class="col-md-6">
+                                        <!-- <label for="lastNameInput">Last name</label> -->
+                                        <input type="text" name='lastName' class='form-control' id='lastNameInput' placeholder='Last name' required>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="emailAddressInput"></label>
+                                    <input id='emailAddressInput' name='email' class='form-control' type="email" placeholder='Email' required>
+
+                                    <label for="userNameInput"></label>
+                                    <input id='userNameInput' name='username' class='form-control' type="text" placeholder='Username' required>
+                                 </div>
+
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                    <!-- <label for="firstNameInput">First name</label> -->
+                                        <input type="password" name='password1' class='form-control' id='passwordInput1' placeholder='Enter password' required>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <!-- <label for="lastNameInput">Last name</label> -->
+                                        <input type="password" name='password2' class='form-control' id='passwordInput2' placeholder='Enter password again' required>
                                     </div>
                                 </div>
+                                
+                                <button name='register' value='register' type="submit" class="btn btn-block mt-3 p-2">Sign Up</button>
+                                <div class='text-center' style="margin-top: 10px;">
+                                    <a href="./index.php">Go back</a>
+                                </div>
+                            </div>
                                 
 
                             </form>

@@ -1,11 +1,5 @@
 <?php
 
-//   username rules:
-//  1) Must  use at least 4 characters
-//  2) Acceptable character set:  [ 'a-z', 'A-Z', '-', '_' ]
-//  3) Cannot start with a number
-//  4) Cannot be empty
-
 //  password rules:
 //  1) Must use at least 8 characters
 

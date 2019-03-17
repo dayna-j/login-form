@@ -65,6 +65,7 @@
                 <input type="checkbox" class="form-check-input custom-control-input" id="exampleCheck1">
                 <label class="custom-control-label" for="exampleCheck1">Remember me</label>
               </div>
+              
               <button name='login' value='login' type="submit" class="btn btn-block mt-3 p-2">Submit</button>
               
               <div class='text-center' style="margin-top: 10px;">
