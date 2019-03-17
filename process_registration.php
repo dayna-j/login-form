@@ -29,7 +29,6 @@ else if(!passwordsMatch($password1,$password2)) exit("<strong>Passwords do not m
 else if(!validatePasswordSyntax($password1,$password2)) exit("<strong>Not a valid password!</strong>");
 else if(!validateFirstNameSyntax($firstName)) exit("<strong>Invalid first name! Must be 40 characters or less and contain only alpabetical characters!</strong>");
 else if(!validateLastNameSyntax($lastName)) exit("<strong>Invalid last name! Must be 40 characters or less and contain only alpabetical characters!</strong>");
-
 else registerUser($username,$password1,$email,$firstName,$lastName);
 // else if(passwordsMatch($password1,$password2) && validatePasswordSyntax($password1,$password2) )
 

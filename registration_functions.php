@@ -70,14 +70,14 @@
     function validateFirstNameSyntax($firstName){
         // alphabetical characters only
         // 40 characters or less
-        $regex = '/[a-zA-Z]{40,}$/';
+        $regex = '/[a-zA-Z]{3,40}$/';
         return preg_match($regex,$firstName);
     }
 
     function validateLastNameSyntax($lastName){
         // alphabetical characters only
         // 40 characters or less
-        $regex = '/[a-zA-Z]{40,}$/';
+        $regex = '/[a-zA-Z]{3,40}$/';
         return preg_match($regex,$lastName);
     }
 
@@ -90,9 +90,16 @@
                 VALUES
                     (:username,:password,:firstName:,:lastName,:email)
                 ';
+
         $stmt = $conn->prepare($sqlQuery);
-        $stmt->bindValue(':username',$username,':password',$password,':firstName',$firstName,':lastName',$lastName,':email',$email);
-        $stmt->execute();
+        // $stmt->bindValue(':username',$username,':password',$password,':firstName',$firstName,':lastName',$lastName,':email',$email);
+        $stmt->execute([
+            ':username' => $username,
+            ':password' => $password1,
+            ':firstName' => $firstName,
+            ':lastName' => $lastName,
+            ':email' => $email
+        ]);
     }
 
 
